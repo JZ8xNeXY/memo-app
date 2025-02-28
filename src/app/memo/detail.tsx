@@ -2,6 +2,7 @@ import { View,Text,ScrollView,StyleSheet } from "react-native"
 import  Header  from "../../components/Header"
 import CircleButton from "../../components/CircleButton"
 import Feather from '@expo/vector-icons/Feather'
+import Icon from '../../components/Icon'
 
 
 const Detail = ():JSX.Element => {
@@ -18,7 +19,7 @@ const Detail = ():JSX.Element => {
           書体やレイアウトなどを確認するために用います。書体やレイアウトなどを確認するために用います。書体やレイアウトなどを確認するために用います。</Text>
       </ScrollView>
       <CircleButton style={{top:160,bottom:'auto'}}>
-        <Feather name='plus' size={40}/>
+      <Icon  name='pencil' size={40} color='#ffffff' />
       </CircleButton>
     </View>
     
