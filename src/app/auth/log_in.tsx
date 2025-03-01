@@ -6,7 +6,7 @@ import { Link ,router} from "expo-router"
 
 const handlePress = () :void => {
   // TODO log in
-  router.push('/memo/list')
+  router.replace('/memo/list')
 } 
 
 
