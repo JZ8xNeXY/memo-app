@@ -3,6 +3,13 @@ import {
  } from "react-native"
 import Header from "../../components/Header"
 import Button from "../../components/Button"
+import { Link ,router} from "expo-router"
+
+const handlePress = () :void => {
+  // TODO log in
+  router.push('/memo/list')
+} 
+
 
 
 const LogIn = ():JSX.Element => {
@@ -13,12 +20,15 @@ const LogIn = ():JSX.Element => {
       <Text style={styles.title}>Log In</Text>
       <TextInput style={styles.input} value='Email Address'></TextInput>
       <TextInput style={styles.input}  value='Password'></TextInput>
-      <Button label='submit'/>
+      <Button label='submit' onPress={handlePress}/>
       <View style={styles.footer}>
         <Text style={styles.footerText}>Not registered?</Text>
-        <TouchableOpacity>
-          <Text style={styles.footerLink}>Sign up here</Text>
-        </TouchableOpacity>
+        <Link href='/auth/sign_up' asChild>
+          <TouchableOpacity>
+            <Text style={styles.footerLink}>Sign up here</Text>
+          </TouchableOpacity>
+        </Link>
+
       </View>
     </View>
    </View>

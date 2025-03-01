@@ -1,9 +1,12 @@
 import { View,Text,ScrollView,StyleSheet } from "react-native" 
 import  Header  from "../../components/Header"
 import CircleButton from "../../components/CircleButton"
-import Feather from '@expo/vector-icons/Feather'
 import Icon from '../../components/Icon'
+import { router } from "expo-router"
 
+const handlePress = ():void =>{
+ router.push('/memo/edit')
+}
 
 const Detail = ():JSX.Element => {
   return (
@@ -18,7 +21,7 @@ const Detail = ():JSX.Element => {
           買い物リスト
           書体やレイアウトなどを確認するために用います。書体やレイアウトなどを確認するために用います。書体やレイアウトなどを確認するために用います。</Text>
       </ScrollView>
-      <CircleButton style={{top:160,bottom:'auto'}}>
+      <CircleButton onPress={handlePress} style={{top:160,bottom:'auto'}}>
       <Icon  name='pencil' size={40} color='#ffffff' />
       </CircleButton>
     </View>
