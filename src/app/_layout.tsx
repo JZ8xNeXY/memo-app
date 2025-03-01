@@ -1,8 +1,8 @@
-import { Slot} from 'expo-router'
+import { Stack} from 'expo-router'
 
 
 const Layout = ():JSX.Element => {
-  return <Slot /> 
+  return <Stack /> 
 }
 
 export default Layout
