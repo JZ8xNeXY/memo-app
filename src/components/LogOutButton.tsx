@@ -1,7 +1,7 @@
 import {TouchableOpacity,Text,StyleSheet,Alert} from 'react-native'
 import { signOut } from 'firebase/auth'
 import { auth } from '../config'
-import { router, Router } from 'expo-router'
+import { router } from 'expo-router'
 
 
 const handlePress = ():void => {
